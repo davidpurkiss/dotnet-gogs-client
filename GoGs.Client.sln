@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoGs.Dnx", "src\GoGs.Dnx\GoGs.Dnx.csproj", "{BAE43CA5-559C-422C-B552-81B76A429C76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gogs.Dnx", "src\Gogs.Dnx\Gogs.Dnx.csproj", "{BAE43CA5-559C-422C-B552-81B76A429C76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
