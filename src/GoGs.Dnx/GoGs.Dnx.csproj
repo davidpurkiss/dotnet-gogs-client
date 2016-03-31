@@ -38,7 +38,15 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AdminRepos.cs" />
+    <Compile Include="Api\AdminUsers.cs" />
+    <Compile Include="Api\ApiBase.cs" />
+    <Compile Include="Api\Repos.cs" />
+    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Api\ReposWebhooks.cs" />
+    <Compile Include="Api\Users.cs" />
     <Compile Include="GogsClient.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

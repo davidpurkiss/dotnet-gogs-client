@@ -1,7 +1,7 @@
 {
   "supports": {},
   "dependencies": {
-    "Flurl": "1.0.10"
+    "Flurl.Http": "0.7.0"
   },
   "frameworks": {
     ".NETPortable,Version=v4.5,Profile=Profile259": {}
