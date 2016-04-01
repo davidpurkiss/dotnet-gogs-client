@@ -9,10 +9,13 @@ namespace Gogs.Test
         [TestMethod]
         public void AuthenticateTest()
         {
-            GogsClient client = new GogsClient("http://localhost");
+            //Arrange
+            GogsClient client = new GogsClient(TestInfo.HostUrl);
 
-            string token = client.Authenticate("david", "riD4ETwc!");
+            //Act
+            string token = client.Authenticate(TestInfo.AdminUsername, TestInfo.AdminPassword);
 
+            //Assert
             Assert.IsNotNull(token);
             Assert.AreEqual(token, client.AccessToken);
         }

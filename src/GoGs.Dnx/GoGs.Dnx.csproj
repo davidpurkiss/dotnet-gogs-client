@@ -46,7 +46,12 @@
     <Compile Include="Api\ReposWebhooks.cs" />
     <Compile Include="Api\Users.cs" />
     <Compile Include="GogsClient.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\RepositoryCreateInfo.cs" />
+    <Compile Include="Model\RequestInfoBase.cs" />
+    <Compile Include="Model\UserCommon.cs" />
+    <Compile Include="Model\UserEditInfo.cs" />
+    <Compile Include="Model\UserResponse.cs" />
+    <Compile Include="Model\UserCreateInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

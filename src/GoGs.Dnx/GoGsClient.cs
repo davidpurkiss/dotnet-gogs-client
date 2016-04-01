@@ -17,6 +17,7 @@ namespace Gogs
         #region Apis
 
         public AdminRepos AdminRepos { get; private set; }
+        public AdminUsers AdminUsers { get; private set; }
 
         #endregion
 
@@ -25,6 +26,7 @@ namespace Gogs
             this.BaseUrl = baseUrl;
 
             AdminRepos = new AdminRepos(this);
+            AdminUsers = new AdminUsers(this);
         }
 
         public string ApiUrl
@@ -34,6 +36,8 @@ namespace Gogs
                 return $"{BaseUrl}/api/v1";
             }
         }
+
+
 
         public string Authenticate(string username, string password)
         {

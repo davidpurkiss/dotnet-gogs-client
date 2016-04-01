@@ -16,29 +16,20 @@ namespace Gogs.Api
         {
         }
 
-        public Repository CreateRepository(string username, string name, string description = null, bool? @private = null, bool? autoInit = null, string gitIgnores = null, string license = null, string readme = null)
+        public Repository CreateRepository(string username, RepositoryCreateInfo createInfo)
         {
-            var t = CreateRepositoryAsync(username, name, description, @private, autoInit, gitIgnores, license, readme);
+            var t = CreateRepositoryAsync(username, createInfo);
             t.Wait();
             return t.Result;
         }
 
-        public async Task<Repository> CreateRepositoryAsync(string username, string name, string description = null, bool? @private = null, bool? autoInit = null, string gitIgnores = null, string license = null, string readme = null)
+        public async Task<Repository> CreateRepositoryAsync(string username, RepositoryCreateInfo createInfo)
         {
-            dynamic body = new ExpandoObject();
-            body.name = name;
-            if (description != null) body.description = description;
-            if (@private != null) body.@private = @private;
-            if (autoInit != null) body.auto_init = autoInit;
-            if (gitIgnores != null) body.gitignores = gitIgnores;
-            if (license != null) body.license = license;
-            if (readme != null) body.readme = readme;
-
             var result = ApiUrl
                 .AppendPathSegment($"/admin/users/{username}/repos")
                 .WithHeader("Accept", "application/json")
-                .WithOAuthBearerToken(_client.AccessToken)
-                .PostJsonAsync(new { name = name })
+                .WithHeader("Authorization", $"token {_client.AccessToken}")
+                .PostJsonAsync(createInfo.GetRequestBody())
                 .ReceiveJson<Repository>();
 
             return await result;

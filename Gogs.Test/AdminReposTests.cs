@@ -9,11 +9,16 @@ namespace Gogs.Test
         [TestMethod]
         public void CreateRepositoryTest()
         {
-            GogsClient client = new GogsClient("http://localhost");
+            //Arrange
+            string repoName = "test-reop";
+            GogsClient client = new GogsClient(TestInfo.HostUrl);
+            client.Authenticate(TestInfo.AdminUsername, TestInfo.AdminPassword);
 
-            client.Authenticate("david", "riD4ETwc!");
+            //Act
+            var repo = client.AdminRepos.CreateRepository(TestInfo.AdminUsername, new Model.RepositoryCreateInfo { Name = repoName });
 
-            var repo = client.AdminRepos.CreateRepository("david", "testrepo");
+            //Assert
+            Assert.AreEqual($"{TestInfo.AdminUsername}/{repoName}", repo.Full_Name);
         }
     }
 }
