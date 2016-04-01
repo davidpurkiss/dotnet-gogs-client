@@ -1,4 +1,7 @@
 $root = (split-path -parent $MyInvocation.MyCommand.Definition) + '\..'
+
+Write-Host "Root is $root"
+
 $version = [System.Reflection.Assembly]::LoadFile("$root\src\Gogs.Dnx\bin\Release\Gogs.Dnx.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)
 
