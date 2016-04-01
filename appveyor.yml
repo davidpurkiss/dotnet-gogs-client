@@ -13,7 +13,7 @@ after_build:
 - ps: .\nuget\pack.ps1
 test: off
 artifacts:
-- path: '**\*.nupkg'
+- path: '**\Gogs.Dnx.*.nupkg'
 - path: '**\*.dll'
 deploy:
 - provider: NuGet
