@@ -1,6 +1,8 @@
 # dotnet-gogs-client
 .Net Client for Gogs
 
+[![Build status](https://ci.appveyor.com/api/projects/status/q60gshgxeg7gp0lj?svg=true)](https://ci.appveyor.com/project/davidpurkiss/dotnet-gogs-client)
+
 Cross-Platform support targeting the following platforms.
 
 * .NET Framework 4.5 and 4.5.1
