@@ -1,8 +1,14 @@
 version: 0.1.{build}
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 before_build:
 - ps: nuget restore
 build:
-  publish_nuget: true
-  include_nuget_references: true
   verbosity: minimal
+after_build:
+- ps: .\nuget\pack.ps1
 test: off
