@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Gogs.Dnx</id>
+    <version>$version$</version>
+    <title>Gogs .Net portable Client</title>
+    <authors>David Purkiss</authors>
+    <owners>David Purkiss</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Gogs is a simple, lightweight and cross-platform git service written in Go. This library provides an interface into the Gogs REST API using .Net.</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Gogs Git Go</tags>
+  </metadata>
+</package>
