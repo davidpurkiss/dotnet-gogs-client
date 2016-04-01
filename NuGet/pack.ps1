@@ -2,7 +2,7 @@ $root = (split-path -parent $MyInvocation.MyCommand.Definition) + '\..'
 
 Write-Host "Root is $root"
 
-$version = [System.Reflection.Assembly]::LoadFile("$root\src\Gogs.Dnx\bin\Release\Gogs.Dnx.dll").GetName().Version
+$version = [System.Reflection.Assembly]::LoadFile("$root\src\Gogs.Dnx\bin\Debug\Gogs.Dnx.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)
 
 Write-Host "Setting .nuspec version tag to $versionStr"
