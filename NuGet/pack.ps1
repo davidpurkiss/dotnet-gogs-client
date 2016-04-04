@@ -12,4 +12,4 @@ $content = $content -replace '\$version\$',$versionStr
 
 $content | Out-File $root\src\Gogs.Dnx\Gogs.Dnx.compiled.nuspec
 
-& $root\NuGet\NuGet.exe pack $root\src\Gogs.Dnx\Gogs.Dnx.compiled.nuspec
+& $root\NuGet\NuGet.exe pack $root\src\Gogs.Dnx\Gogs.Dnx.csproj -IncludeReferencedProjects

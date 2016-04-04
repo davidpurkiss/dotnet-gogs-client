@@ -8,9 +8,13 @@
     <owners>David Purkiss</owners>
     <licenseUrl>https://github.com/davidpurkiss/dotnet-gogs-client/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/davidpurkiss/dotnet-gogs-client</projectUrl>
+    <iconUrl>https://gogs.io/img/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Gogs is a simple, lightweight and cross-platform git service written in Go. This library provides an interface into the Gogs REST API using .Net.</description>
     <copyright>Copyright 2016 David Purkiss</copyright>
     <tags>Gogs Git Server Go</tags>
+  <dependencies>
+      <dependency id="Flurl.Http" version="0.7.0" />
+    </dependencies>
   </metadata>
 </package>
