@@ -64,7 +64,7 @@ The following is the implementation list pulled from the [go-gogs-client wiki](h
     - [ ] Webhooks
 - [ ] Pull Requests
     - [ ] Review Comments
-- [ ] Repositories
+- [x] Repositories
     - [ ] Collaborators
     - [ ] Comments
     - [ ] Commits
