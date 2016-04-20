@@ -73,7 +73,7 @@ The following is the implementation list pulled from the [go-gogs-client wiki](h
     - [ ] Forks
     - [ ] Releases
     - [x] Webhooks
-- [ ] Users
+- [x] Users
     - [ ] Emails
     - [ ] Followers
     - [ ] Public Keys
