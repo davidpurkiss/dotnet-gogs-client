@@ -14,10 +14,13 @@ namespace Gogs
         public string AccessToken { get; internal set; }
         public string BaseUrl { get; internal set; }
 
+        internal string Username { get; set; }
+
         #region Apis
 
         public AdminRepos AdminRepos { get; private set; }
         public AdminUsers AdminUsers { get; private set; }
+        public ReposWebhooks RepositoryWebhooks { get; private set; }
 
         #endregion
 
@@ -27,6 +30,7 @@ namespace Gogs
 
             AdminRepos = new AdminRepos(this);
             AdminUsers = new AdminUsers(this);
+            RepositoryWebhooks = new ReposWebhooks(this);
         }
 
         public string ApiUrl
@@ -36,8 +40,6 @@ namespace Gogs
                 return $"{BaseUrl}/api/v1";
             }
         }
-
-
 
         public string Authenticate(string username, string password)
         {
@@ -60,6 +62,7 @@ namespace Gogs
 
                 token = response.sha1;
                 this.AccessToken = token;
+                this.Username = username;
                 return token;
             }
             catch (FlurlHttpException ex)

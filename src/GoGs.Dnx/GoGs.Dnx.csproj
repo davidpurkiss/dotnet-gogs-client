@@ -43,6 +43,7 @@
     <Compile Include="Api\AdminUsers.cs" />
     <Compile Include="Api\ApiBase.cs" />
     <Compile Include="Api\Repos.cs" />
+    <Compile Include="Model\RepositoryWebhook.cs" />
     <Compile Include="Model\Repository.cs" />
     <Compile Include="Api\ReposWebhooks.cs" />
     <Compile Include="Api\Users.cs" />

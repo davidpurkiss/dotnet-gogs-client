@@ -10,7 +10,7 @@ namespace Gogs.Test
         public void CreateRepositoryTest()
         {
             //Arrange
-            string repoName = "test-reop";
+            string repoName = "test-repo";
             GogsClient client = new GogsClient(TestInfo.HostUrl);
             client.Authenticate(TestInfo.AdminUsername, TestInfo.AdminPassword);
 

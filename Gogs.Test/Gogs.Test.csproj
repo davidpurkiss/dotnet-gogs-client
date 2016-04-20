@@ -68,6 +68,7 @@
     <Compile Include="GogsClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AdminReposTests.cs" />
+    <Compile Include="RepositoryWebHooksTests.cs" />
     <Compile Include="TestInfo.cs" />
   </ItemGroup>
   <ItemGroup>

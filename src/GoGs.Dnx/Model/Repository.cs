@@ -4,7 +4,7 @@ namespace Gogs.Model
 {
     public class Repository
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         public UserResponse Owner { get; set; }
 
