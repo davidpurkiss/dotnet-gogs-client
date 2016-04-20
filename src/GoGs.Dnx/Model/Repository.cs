@@ -6,7 +6,7 @@ namespace Gogs.Model
     {
         public int Id { get; set; }
 
-        public UserResponse Owner { get; set; }
+        public User Owner { get; set; }
 
         public string Full_Name { get; set; }
 

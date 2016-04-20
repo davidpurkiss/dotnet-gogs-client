@@ -17,40 +17,40 @@ namespace Gogs.Api
 
         }
 
-        public UserResponse CreateUser(UserCreateInfo createInfo)
+        public User CreateUser(UserCreateInfo createInfo)
         {
             var t = CreateUserAsync(createInfo);
             t.Wait();
             return t.Result;
         }
 
-        public async Task<UserResponse> CreateUserAsync(UserCreateInfo createInfo)
+        public async Task<User> CreateUserAsync(UserCreateInfo createInfo)
         {
             var result = ApiUrl
                .AppendPathSegment($"/admin/users")
                .WithHeader("Accept", "application/json")
                .WithHeader("Authorization", $"token {_client.AccessToken}")
                .PostJsonAsync(createInfo.GetRequestBody())
-               .ReceiveJson<UserResponse>();
+               .ReceiveJson<User>();
 
             return await result;
         }
 
-        public UserResponse EditUser(string username, UserEditInfo editInfo)
+        public User EditUser(string username, UserEditInfo editInfo)
         {
             var t = EditUserAsync(username, editInfo);
             t.Wait();
             return t.Result;
         }
 
-        public async Task<UserResponse> EditUserAsync(string username, UserEditInfo editInfo)
+        public async Task<User> EditUserAsync(string username, UserEditInfo editInfo)
         {
             var result = ApiUrl
               .AppendPathSegment($"/admin/users/{username}")
               .WithHeader("Accept", "application/json")
               .WithHeader("Authorization", $"token {_client.AccessToken}")
               .PatchJsonAsync(editInfo.GetRequestBody())
-              .ReceiveJson<UserResponse>();
+              .ReceiveJson<User>();
 
             return await result;
         }

@@ -22,6 +22,7 @@ namespace Gogs
         public AdminUsers AdminUsers { get; private set; }
         public ReposWebhooks RepositoryWebhooks { get; private set; }
         public Repos Repositories { get; private set; }
+        public Users Users { get; private set; }
 
         #endregion
 
@@ -33,6 +34,7 @@ namespace Gogs
             AdminUsers = new AdminUsers(this);
             RepositoryWebhooks = new ReposWebhooks(this);
             Repositories = new Repos(this);
+            Users = new Users(this);
         }
 
         public string ApiUrl

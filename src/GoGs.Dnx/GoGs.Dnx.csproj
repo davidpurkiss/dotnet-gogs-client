@@ -43,6 +43,8 @@
     <Compile Include="Api\AdminUsers.cs" />
     <Compile Include="Api\ApiBase.cs" />
     <Compile Include="Api\Repos.cs" />
+    <Compile Include="Model\AccessToken.cs" />
+    <Compile Include="Model\AccessTokenCreateInfo.cs" />
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\Branch.cs" />
     <Compile Include="Model\Commit.cs" />
@@ -56,7 +58,7 @@
     <Compile Include="Model\RequestInfoBase.cs" />
     <Compile Include="Model\UserCommon.cs" />
     <Compile Include="Model\UserEditInfo.cs" />
-    <Compile Include="Model\UserResponse.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserCreateInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
